@@ -1,0 +1,159 @@
+/**index.wxss**/
+
+.index {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #065784;
+}
+
+.index .banner {
+  width: 100;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.banner .iconB1 {
+  width: 200rpx;
+  height: 200rpx;
+  font-size: 200rpx;
+  text-align: center;
+  margin: 60rpx auto 0;
+}
+
+.banner .name {
+  width: 100%;
+  height: 45rpx;
+  font-size: 45rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.banner .playIcon {
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin: 50rpx auto 0;
+}
+
+.banner .process {
+  height: 20rpx;
+  width: 650rpx;
+  margin: 20rpx auto 0;
+}
+
+.banner .doBox {
+  width: 650rpx;
+  margin: 30rpx auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.doBox .time {
+  font-size: 20rpx;
+  line-height: 40rpx;
+}
+.doBox .voice{
+  display: flex;
+}
+.doBox .voice .ivonV{
+  line-height: 40rpx;
+  font-size: 40rpx;
+  margin-right: 30rpx;
+}
+.doBox .voice .voicepProcess{
+  width: 200rpx;
+  height: 30rpx;
+  margin: 0;
+}
+
+.index .itemBox {
+  width: 100%;
+  height: 590rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.itemBox .back {
+  width: 100%;
+  height: 50rpx;
+  position: relative;
+}
+
+.itemBox .back .wave {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  height: 50rpx;
+  width: 2250rpx;
+  animation: wave 10s linear infinite;
+}
+
+.itemBox .back .wave-bg {
+  z-index: 1;
+  animation: wave-bg 12s linear infinite;
+}
+
+@keyframes wave {
+  from {
+    transform: translate3d(125rpx, 0, 0);
+  }
+
+  to {
+    transform: translate3d(1125rpx, 0, 0);
+  }
+}
+
+@keyframes wave-bg {
+  from {
+    transform: translate3d(375rpx, 0, 0);
+  }
+
+  to {
+    transform: translate3d(1375rpx, 0, 0);
+  }
+}
+
+.itemBox .apps {
+  width: 100%;
+  height: 540rpx;
+  background-color: #cedbe2;
+  padding: 0 25rpx;
+  flex-flow: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.itemBox .sel, .itemBox .sel .iconB {
+  color: #fff;
+}
+
+.itemBox .items {
+  width: 175rpx;
+  height: 180rpx;
+  text-align: center;
+}
+
+.items .iconB {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 50rpx;
+  margin: 50rpx auto 0;
+  color: #b1b1b1;
+}
+
+.items .des {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

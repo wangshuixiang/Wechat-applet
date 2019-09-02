@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="index">
+  <view class='banner'>
+    <view class="icon iconfont {{selMusic.icon}} iconB1"></view>
+    <view class='name'>{{selMusic.name}}</view>
+    <view class="icon iconfont {{play?'iconstop':'iconiconplay'}} playIcon" bindtap='playHandler'></view>
+    <slider class='process' bindchange='seekHandler' bindchanging="slideHandler" min="0" max="{{duration}}" step='0.1' activeColor='#05daff' backgroundColor='#eee' block-size="12" value='{{currentTime}}' />
+    <view class='doBox'>
+      <view class='voice'>
+        <view class='icon iconfont iconstop ivonV'></view>
+        <slider class='voicepProcess' bindchange='sliderChange' min="0" max="100" step='1' activeColor='#fff' backgroundColor='#000' block-size="12" value='{{audioTime}}' />
+      </view>
+      <view class='time'>{{currentTime}}/{{duration}}</view>
+    </view>
+  </view>
+  <view class='itemBox'>
+    <view class='back'>
+      <image class="wave" mode='aspectFill' src="../../images/detail/wave.png" mode="aspectFill"></image>
+      <image class="wave wave-bg" src="../../images/detail/wave.png" mode="aspectFill"></image>
+    </view>
+    <view class="apps">
+      <view class="items {{item.name==selMusic.name?'sel':''}}" bindtap='selectHandler' data-item="{{item}}" wx:for="{{musics}}" wx:key="this">
+        <view class="icon iconfont {{item.icon}} iconB"></view>
+        <view class='des'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
